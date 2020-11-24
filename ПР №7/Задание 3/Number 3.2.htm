@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="windows-1251" />
+</head>
+<body >
+    <button id="One" onclick="func(this)">buttonOne</button>
+    <button id="Two" onclick="func2('One')">buttonTwo</button>
+    <script>
+        function func(elem) {
+            elem.disabled = true;
+        }
+        function func2(id) {
+            document.getElementById(id).disabled = false;
+        }
+
+    </script>
+</body>
+</html>

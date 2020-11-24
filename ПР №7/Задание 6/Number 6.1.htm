@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="windows-1251">
+    <style>
+        input {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <p>TextOne</p>
+    <p>TextTwo</p>
+    <p>Not change</p>
+    <button onclick="func()">Click!</button>
+
+    <script>
+        function func() {
+            let elements = document.getElementsByTagName('p');
+            for (let i = 0; i < elements.length-1; i++) {
+                elements[i].innerHTML = 'Changed';
+            }
+        }
+    </script>
+</body>
+</html>

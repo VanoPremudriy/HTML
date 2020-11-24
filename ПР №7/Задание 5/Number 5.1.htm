@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="windows-1251" />
+</head>
+<body>
+   <p id="Text">Text</p>
+    <button id="ButtonOne" onclick="func('Text')">Click!</button>
+    <script>
+        let txt;
+        function func(id) {
+            txt = document.getElementById('Text');
+            txt.innerHTML = '<b>Not text<b>';
+            txt.style.fontSize = '20px';
+        }
+    </script>
+</body>
+</html>

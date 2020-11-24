@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="windows-1251" />
+</head>
+<body>
+    <input type="text" value="Text" id="Text" width="300"  />
+    <button id="Button" onclick="func('Text')">Click!</button>
+    <script>
+        let txt;
+        function func(id) {
+            txt = document.getElementById(id);
+            txt.value = 'Not text';
+            txt.style.color = 'red';
+            txt.style.width = '500px';
+            txt.style.height = '300px';
+            txt.style.borderRadius = '30px';
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="windows-1251" />
+</head>
+<body>
+    <input type="text" value="Text" onfocus="func(this)" onblur="func2(this)"  id="Text">
+    <script>
+
+        function func(elem) {
+            elem.value = 'Not text';
+            isClick = true;
+        }
+
+        function func2(elem) {
+            elem.value = 'Text';
+        }
+       
+    </script>
+</body>
+</html>
