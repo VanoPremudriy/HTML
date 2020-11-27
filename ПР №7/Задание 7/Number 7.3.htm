@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="windows-1251">
+    <style>
+    </style>
+</head>
+<body>
+   <span id="Timer">00:00:00</span>
+    <script>
+        window.setInterval(timer, 1000);
+        function timer() {
+            let Timer = document.getElementById("Timer");
+            let time = Timer.innerHTML;
+            let arr = time.split(":");
+            let h = arr[0];
+            let m = arr[1];
+            let s = arr[2];
+            s++;
+            if (s < 10) s = "0" + s;
+            if (s > 59) {
+                m++;
+                if (m < 10) m = "0" + m;
+                s = "00";
+
+            }
+            if (m > 59) {
+                h++;
+                if (h < 10) h = "0" + h;
+                m = "00";
+            }
+
+            if (h > 23) {
+                h = "00";
+                m = "00";
+                s = "00";
+            }
+            document.getElementById("Timer").innerHTML = h + ":" + m + ":" + s;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="windows-1251">
+    <style>
+    </style>
+</head>
+<body>
+    <img src="img1.jpg" id="IMG" width="400" height="300" />
+    <br />
+    <br />
+    <button onclick="start()">Запуск карусели</button>
+    <button onclick="stop()">Остановка карусели</button>
+    <script>
+        let count = 2;
+        function start() {
+
+            window.timerId = window.setInterval(timer, 1000);
+        }
+        
+        function timer() {
+            document.getElementById('IMG').src = 'img' + (count) + ".jpg";
+            count++;
+            if (count > 5) count = 1;
+        }
+
+        function stop() {
+            window.clearInterval(window.timerId);
+        }
+    </script>
+</body>
+</html>

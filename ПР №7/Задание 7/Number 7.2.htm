@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="windows-1251">
+    <style>
+    </style>
+</head>
+<body>
+    <input type="text" value="0" id="Time" />
+    <button onclick="start()">Запуск таймера</button>
+    <button onclick="stop()">Остановка таймера</button>
+
+    <script>
+        function start() {
+            
+            window.timerId = window.setInterval(timer, 1000);
+        }
+
+        function timer() {
+            var elem = document.getElementById('Time');
+            elem.value = parseInt(elem.value) + 1; 
+        }
+
+        function stop() {
+            window.clearInterval(window.timerId);
+        }
+    </script>
+</body>
+</html>

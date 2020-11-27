@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="windows-1251">
+    <style>
+    </style>
+</head>
+<body>
+    <img src="img1.jpg" id="IMG" width="400" height="300"/>
+    <script>
+        window.setInterval(timer, 1000);
+        let count = 2;
+        function timer() {
+            document.getElementById('IMG').src = 'img' + (count) + ".jpg";
+            count++;
+            if (count > 4) count = 1;
+        }
+    </script>
+</body>
+</html>

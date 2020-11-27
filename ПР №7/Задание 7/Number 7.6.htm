@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="windows-1251">
+    <style>
+    </style>
+</head>
+<body>
+    <span id="Timer">00:00:00</span>
+    <script>
+        window.setInterval(timer, 1000);
+        let date = new Date();
+        let hour =  24-date.getHours();
+        let minutes =  60-date.getMinutes();
+        let seconds =60-date.getSeconds();
+        if (hour < 10) hour = '0' + hour;
+        if (minutes < 10) minutes = '0' + minutes;
+        if (seconds < 10) seconds = '0' + seconds;
+        document.getElementById("Timer").innerHTML = hour + ':' + minutes + ':' + seconds;
+        
+        function timer() {
+            let Timer = document.getElementById("Timer");
+            let time = Timer.innerHTML;
+            let arr = time.split(":");
+            let h = arr[0];
+            let m = arr[1];
+            let s = arr[2];
+            if (s == 0) {
+                if (m == 0) {
+                    if (h == 0) {
+                        alert("Время вышло"); 
+                        timer();
+                    }
+                    h--;
+                    m = 60;
+                    if (h < 10) h = "0" + h;
+                }
+                m--;
+                if (m < 10) m = "0" + m;
+                s = 59;
+            }
+            else s--;
+            if (s < 10) s = "0" + s;
+            document.getElementById("Timer").innerHTML = h + ":" + m + ":" + s; 
+           
+        }
+    </script>
+</body>
+</html>
