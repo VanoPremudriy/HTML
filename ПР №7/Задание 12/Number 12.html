@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>12</title>
+  <style>
+    .tree span:hover {
+      font-weight: bold;
+    }
+
+    .tree span {
+      cursor: pointer;
+    }
+  </style>
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+    <ul class="tree" id="tree">
+    <li>Продукты
+      <ul>
+        <li>Овощи
+          <ul>
+            <li>Огурец</li>
+            <li>Помидор</li>
+            <li>Капуста</li>
+            <li>Морковь</li>
+          </ul>
+        </li>
+        <li>Молочные
+          <ul>
+            <li>Сыр</li>
+            <li>Творог</li>
+            <li>Молоко</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    </ul>
+  <script>
+    for (let li of tree.querySelectorAll('li')) {
+      let span = document.createElement('span');
+      li.prepend(span);
+      span.append(span.nextSibling);
+    }
+
+    tree.onclick = function(event) {
+
+      if (event.target.tagName != 'SPAN') {
+        return;
+      }
+
+      let childrenContainer = event.target.parentNode.querySelector('ul');
+      if (!childrenContainer) return;
+
+      childrenContainer.hidden = !childrenContainer.hidden;
+    }
+  </script>
+
+</body>
+</html>

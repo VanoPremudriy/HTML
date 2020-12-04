@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>8.2</title>
+        <meta charset="windows-1251">
+        <style>
+            #elem {
+        	    width: 200px;
+	            height: 100px;
+	            padding: 2px;
+	            border: 2px solid #BCBCBC;
+	            overflow: auto;
+            }   
+        </style>
+    </head>
+    <body>
+        <div id="elem">dsvsdvsd<br>vsveasrves<br>rdfvsergarg<br>edsgesfgsedb<br>sergesfbdsfbesrese<br>
+            sdvsdvfdv<br>sdvsvdsrdv<br>sdvsdf<br>dsvsdv<br>vsveasrves<br>rdfvsergarg<br>edsgesfgsedb<br>
+            sergesfbdsfbesrese<br>sdvsdvfdv<br>sdvsvdsrdv<br>sdvsdf<br>dsvsdv<br>dsefwsefwsefwe<br>ewsfwef<br>sfswfwefwefw</div>
+        <br><br>
+        <button onclick="scrollinfo()">Click!</button> 
+        <script>
+            function scrollinfo(){
+                let sTop = document.getElementById("elem");
+                sTop.scrollTop = 200;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>10</title>
+        <meta charset="utf-8">
+        <style>
+            
+.pane {
+    border: solid;
+    border-width: 1px;
+    position: relative;
+    width: 470px;
+}
+
+.remove-button {
+  position: absolute;
+  font-size: 110%;
+  top: 0;
+  color: darkred;
+  right: 10px;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+        </style>
+    </head>
+    <body>
+
+        <div>
+            <div class="pane">
+              <p>Текст (от лат. textus — ткань; сплетение, сочетание) — зафиксированная на каком-либо материальном носителе человеческая мысль; в общем плане связная и полная последовательность символов.</p>
+            </div>
+            <div class="pane">
+              <p>Существуют две основные трактовки понятия «текст»: имманентная (расширенная, философски нагруженная) и репрезентативная (более частная). Имманентный подход подразумевает отношение к тексту как к автономной реальности, нацеленность на выявление его внутренней структуры. Репрезентативный — рассмотрение текста как особой формы представления информации о внешней тексту действительности.</p>
+            </div>
+            <div class="pane">
+              <p>В лингвистике термин «текст» используется в широком значении, включая и образцы устной речи. Восприятие текста изучается в рамках лингвистики текста и психолингвистики. </p>
+            </div>
+          </div>
+        
+        
+          <script>
+            let panes = document.querySelectorAll('.pane');
+        
+            for(let pane of panes) {
+              pane.insertAdjacentHTML("afterbegin", '<button class="remove-button">[x]</button>');
+              pane.firstChild.addEventListener("click",function(){
+                pane.remove();
+              });
+            }
+          </script>
+    </body>
+</html>
