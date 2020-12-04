@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>15</title>
+        <meta charset="utf-8">
+        <style>
+            #largeImg {
+                border: solid 1px #ccc;
+                width: 550px;
+                height: 400px;
+                padding: 5px;
+            }
+
+            #images a {
+                border: solid 1px #ccc;
+                width: 100px;
+                height: 100px;
+                padding: 3px;
+                margin: 2px;
+                float: left;
+            }
+            #images img {
+                width: 100px;
+                height: 100px;
+            }
+
+            #images a:hover {
+             border-color: #FF9900;
+            }
+
+            #images li {
+             list-style: none;
+            }
+
+            #images {
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <p><img id="largeImg" src="https://avatars.mds.yandex.net/get-zen_doc/1708265/pub_5e5643470fc21b00a5b15e00_5e7d7e3e6ea28b34aa505d78/scale_1200" alt="Large image"></p>
+
+        <ul id="images">
+          <li>
+            <a href="https://avatars.mds.yandex.net/get-zen_doc/1708265/pub_5e5643470fc21b00a5b15e00_5e7d7e3e6ea28b34aa505d78/scale_1200">
+                <img src="https://avatars.mds.yandex.net/get-zen_doc/1708265/pub_5e5643470fc21b00a5b15e00_5e7d7e3e6ea28b34aa505d78/scale_1200">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.wallpaperup.com/uploads/wallpapers/2014/06/04/363896/1ed36f1d085ab09c398540f2f703007f-1000.jpg">
+                <img src="https://www.wallpaperup.com/uploads/wallpapers/2014/06/04/363896/1ed36f1d085ab09c398540f2f703007f-1000.jpg">
+            </a>
+          </li>
+          <li>
+            <a href="https://volyn.com.ua/content/thumbs/1500x1000/s/n7/55c3vm-xdkwvfj5jeqpzdgpzq36huztn7jzvn7s.jpg">
+                <img src="https://volyn.com.ua/content/thumbs/1500x1000/s/n7/55c3vm-xdkwvfj5jeqpzdgpzq36huztn7jzvn7s.jpg">
+            </a>
+          </li>
+          <li>
+            <a href="https://s3.nat-geo.ru/images/2019/4/10/f7bd071a3f7749478aec32c4dc07a897.max-2000x1000.jpg">
+                <img src="https://s3.nat-geo.ru/images/2019/4/10/f7bd071a3f7749478aec32c4dc07a897.max-2000x1000.jpg">
+            </a>
+          </li>
+          <li>
+            <a href="https://avatars.mds.yandex.net/get-zen_doc/1917783/pub_5cdfebc1b3217a00b3885c44_5cdff5686a5bb500b3d59931/scale_1200">
+                <img src="https://avatars.mds.yandex.net/get-zen_doc/1917783/pub_5cdfebc1b3217a00b3885c44_5cdff5686a5bb500b3d59931/scale_1200">
+            </a>
+          </li>
+        </ul>
+      
+        <script>
+          images.onclick = function(event) {
+            let image = event.target.closest('a');
+            if (!image) return false;
+            showImages(image.href);
+            event.preventDefault();
+          }
+      
+          function showImages(href) {
+            largeImg.src = href;
+          }
+        </script>
+    </body>
+</html>
