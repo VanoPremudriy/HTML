@@ -35,19 +35,15 @@
 </head>
 
 <body>
-
-
   <div id="field">
     <img src="https://sernia.ru/upload/medialibrary/890/myach.png" width="40" height="40" id="ball">
   </div>
-
   <script>
     function makeEaseOut(timing) {
       return function(timeFraction) {
         return 1 - timing(1 - timeFraction);
       }
     }
-
     function bounce(timeFraction) {
       for (let a = 0, b = 1, result; 1; a += b, b /= 2) {
         if (timeFraction >= (7 - 4 * a) / 11) {
@@ -55,11 +51,8 @@
         }
       }
     }
-
     ball.onclick = function() {
-
       let to = field.clientHeight - ball.clientHeight;
-
       animate({
         duration: 2000,
         timing: makeEaseOut(bounce),
@@ -67,13 +60,7 @@
           ball.style.top = to * progress + 'px'
         }
       });
-
-
     };
   </script>
-
-
-
 </body>
-
 </html>
